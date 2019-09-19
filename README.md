@@ -1,5 +1,5 @@
 # Gulp Usage
-Gulp usage
+Gulp usage to convert sass or scss file into css
 
 ## Installing Gulp
   - First install [Node](https://nodejs.org/en/)
@@ -56,3 +56,14 @@ Gulp usage
   ```
   - You'll find and style.css file in 'assets/css'
   - Open it and you'll see the compiled styles
+  
+ ## Globbing in Node
+  - Globs are matching patterns for files that allow you to add more than one file into gulp.src
+  ```javascript
+  gulp.task('sass', function(){
+    return gulp.src('assets/scss/**/*.scss')
+      .pipe(sass()) // Converts Sass to CSS with gulp-sass
+      .pipe(gulp.dest('assets/css'))
+  });
+  ```
+  - Any other Sass file that's found within assets/scss would automatically be generated in assets/css.
