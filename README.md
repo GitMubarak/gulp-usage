@@ -5,9 +5,8 @@ Gulp usage
   - First install [Node](https://nodejs.org/en/)
   - Install Gulp globally:
   ```javascript
-  $ npm install gulp -g
+  $ npm install gulp -g // -g for globally
   ```
-  - (-g means globally)
   - Go to the project folder and run:
   ```javascript
   $ npm init
@@ -25,6 +24,9 @@ Gulp usage
   var gulp = require('gulp');
   
   gulp.task('hello', function() {
-    console.log('Hello Zell');
+    console.log('Hello World!');
   });
+  ```
+  ```javascript
+  $ gulp hello
   ```
